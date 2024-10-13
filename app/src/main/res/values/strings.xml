@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">umXplore</string>
+    <string name="title_home">Beranda</string>
+    <string name="title_dashboard">Belanja</string>
+    <string name="title_notifications">Bantuan</string>
+    <string name="title_akun">Akun</string>
+    <string name="title_faq">Pertanyaan</string>
+
+    <string name="register">Daftar</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

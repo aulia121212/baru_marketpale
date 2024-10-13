@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar with Back Button and Text -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Back Button in Toolbar -->
+            <ImageButton
+                android:id="@+id/button_back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/baseline_arrow_back_24"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Profile Toko"
+                android:textColor="@color/kuning"
+                android:textSize="18sp"
+                android:paddingStart="8dp" />
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"> <!-- Added padding for better spacing -->
+
+            <!-- Store Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Store Profile Image -->
+                <ImageView
+                    android:id="@+id/image_profil_toko"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/profile_toko"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Profil Toko" />
+
+                <!-- Store Name and Contact Section -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!-- Store Name -->
+                    <TextView
+                        android:id="@+id/nama_toko"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Nama Toko"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <!-- Contact Section -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kontak :"
+                        android:textSize="16sp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:id="@+id/kontak_section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="1dp">
+
+                        <!-- WhatsApp Image Button -->
+
+                        <!-- Maps Image Button -->
+                        <ImageButton
+                            android:id="@+id/button_whatsapp"
+                            android:layout_width="40dp"
+                            android:layout_height="60dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="WhatsApp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/logo_wa"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <ImageButton
+                            android:id="@+id/button_maps"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="10dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="Google Maps"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/logo_maps"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <!-- Another Marketplace Image Button -->
+                        <ImageButton
+                            android:id="@+id/button_shopee"
+                            android:layout_width="110dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="3dp"
+
+                            android:layout_marginStart="15dp"
+                            android:background="@drawable/border_button"
+                            android:contentDescription="Marketplace"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/logo_anothermarketplace"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:src="@drawable/line" />
+
+            <ImageView
+                android:id="@+id/image_logo2"
+                android:layout_width="283dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/tab_produk_merah" />
+
+            <!-- Product Description -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:id="@+id/linear_bawah_line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <!-- Kartu pertama -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="260dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/card_background"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/image3"
+                            android:layout_width="match_parent"
+                            android:layout_height="155dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/umkm_3_mucrova" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/text3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_regular"
+                                android:textColor="@android:color/black"
+                                android:textSize="12sp"
+                                android:text="NAMA PRODUK" />
+
+                            <ImageView
+                                android:id="@+id/love_icon"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/baseline_favorite_border_24"
+                                android:layout_marginStart="34dp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/subtext3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="12sp"
+
+                            android:text="NAMA TOKO" />
+
+                        <ImageButton
+                            android:id="@+id/kukar_lihat_detail3"
+                            android:layout_width="140dp"
+                            android:layout_height="22dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/lihat_produk_detail"
+                            android:onClick="onLihatDetailClicked" />
+                    </LinearLayout>
+
+
+                    <!-- Kartu kedua -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="260dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/card_background"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/image4"
+                            android:layout_width="match_parent"
+                            android:layout_height="155dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/umkm_3_mucrova" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/text4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_regular"
+                                android:textColor="@android:color/black"
+                                android:textSize="12sp"
+                                android:text="NAMA PRODUK" />
+
+                            <ImageView
+                                android:id="@+id/love_icon2"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/baseline_favorite_border_24"
+                                android:layout_marginStart="34dp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/subtext4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="12sp"
+
+                            android:text="NAMA TOKO" />
+
+                        <ImageButton
+                            android:id="@+id/kukar_lihat_detail4"
+                            android:layout_width="140dp"
+                            android:layout_height="22dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/lihat_produk_detail"
+                            android:onClick="onLihatDetailClicked" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_bawah_line3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:layout_marginBottom="16dp">
+
+                    <!-- Kartu pertama -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="260dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/card_background"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/image5"
+                            android:layout_width="match_parent"
+                            android:layout_height="155dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/umkm_3_mucrova" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/text5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_regular"
+                                android:textColor="@android:color/black"
+                                android:textSize="12sp"
+                                android:text="NAMA PRODUK" />
+
+                            <ImageView
+                                android:id="@+id/love_icon3"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/baseline_favorite_border_24"
+                                android:layout_marginStart="34dp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/subtext5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="12sp"
+
+                            android:text="NAMA TOKO" />
+
+                        <ImageButton
+                            android:id="@+id/kukar_lihat_detail5"
+                            android:layout_width="140dp"
+                            android:layout_height="22dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/lihat_produk_detail"
+                            android:onClick="onLihatDetailClicked" />
+                    </LinearLayout>
+
+
+                    <!-- Kartu kedua -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="260dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/card_background"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/image6"
+                            android:layout_width="match_parent"
+                            android:layout_height="155dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/umkm_3_mucrova" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/text6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_regular"
+                                android:textColor="@android:color/black"
+                                android:textSize="12sp"
+                                android:text="NAMA PRODUK" />
+
+                            <ImageView
+                                android:id="@+id/love_icon4"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/baseline_favorite_border_24"
+                                android:layout_marginStart="34dp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/subtext6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="12sp"
+
+                            android:text="NAMA TOKO" />
+
+                        <ImageButton
+                            android:id="@+id/kukar_lihat_detail6"
+                            android:layout_width="140dp"
+                            android:layout_height="22dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/lihat_produk_detail"
+                            android:onClick="onLihatDetailClicked" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
