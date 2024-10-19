@@ -43,7 +43,20 @@
         android:id="@+id/navigation_akun"
         android:name="com.example.umxplore.ui.akun.AkunFragment"
         android:label="@string/title_akun"
-        tools:layout="@layout/fragment_masuk_activity" />
+        tools:layout="@layout/fragment_akun" >
+        <action
+            android:id="@+id/action_navigation_akun_to_navigation_masuk"
+            app:destination="@id/navigation_masuk" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_masuk"
+        android:label="@string/title_akun"
+        tools:layout="@layout/fragment_masuk_activity" >
+        <action
+            android:id="@+id/action_navigation_masuk_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
 
 
     <fragment
