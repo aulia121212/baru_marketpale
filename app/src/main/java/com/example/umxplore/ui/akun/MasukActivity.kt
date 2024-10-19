@@ -69,20 +69,24 @@ class MasukActivity : AppCompatActivity() {
                 pb.visibility = View.GONE
 
                 val respon = response.body()!!
-                Log.d("LoginResponse", "Response: ${respon?.success}")
+                Log.d("LoginResponse", "Response: ${respon?.succes}")
 
-                if (respon.success == 1) {
+                if (respon.succes == 1) {
                     saveLoginStatus(true)
 
-                    // Intent ke MainActivity
+                    // Intent ke MainActivity dengan extra 'show_akun_terdaftar'
+                    val user = respon.user
 
-                    val intent = Intent(this@MasukActivity, MainActivity::class.java)
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                    val intent = Intent(this@MasukActivity, MainActivity::class.java).apply {
+                        putExtra("user_id", user.id)
+                        putExtra("show_akun_terdaftar", true) // Kirimkan flag secara eksplisit
+                    }
                     startActivity(intent)
                     finish()
 
                     Toast.makeText(this@MasukActivity, "Selamat datang " + respon.user.name, Toast.LENGTH_SHORT).show()
-                } else {
+                }
+                else {
                     Toast.makeText(this@MasukActivity, respon?.message ?: "Unknown error", Toast.LENGTH_SHORT).show()
                 }
             }

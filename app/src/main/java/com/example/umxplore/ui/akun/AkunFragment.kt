@@ -90,7 +90,7 @@ class AkunFragment : Fragment() {
 
             override fun onResponse(call: Call<ResponModel>, response: Response<ResponModel>) {
                 val respon = response.body()!!
-                if (respon.success == 1) {
+                if (respon.succes == 1) {
                     Toast.makeText(requireContext(), respon.message, Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(requireContext(), respon.message, Toast.LENGTH_SHORT).show()

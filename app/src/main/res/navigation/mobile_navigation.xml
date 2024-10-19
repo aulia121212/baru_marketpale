@@ -60,6 +60,16 @@
 
 
     <fragment
+        android:id="@+id/navigation_akun_terdaftar"
+        android:name="com.example.umxplore.ui.akun.AkunTerdaftarFragment"
+        android:label="Akun Terdaftar"
+        tools:layout="@layout/fragment_akun_terdaftar" />
+
+
+
+
+
+    <fragment
         android:id="@+id/navigation_faq"
         android:name="com.example.umxplore.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"

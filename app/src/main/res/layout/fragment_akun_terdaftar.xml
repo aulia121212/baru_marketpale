@@ -112,7 +112,7 @@
 
     <!-- Logout Button -->
     <ImageButton
-        android:id="@+id/btnLogout"
+        android:id="@+id/btn_Logout"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:src="@drawable/logout"
